@@ -19,7 +19,7 @@ class sign_in extends appModel{
 		// whether the user has valid credentials
 		// NOTE: $user at the next line will have the contents of the "people" table ONLY
 
-echo 'test';return 'test';
+return 'test';
 
 		if(!SKIP_LOGIN_FOR_DEV){
 

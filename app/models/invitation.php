@@ -15,6 +15,7 @@ class invitation extends appModel{
 
 
 	function post_form($data){
+return 'success';
 		global $firephp;
 		$new = $this->getPost();
 

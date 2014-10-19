@@ -32,7 +32,6 @@ define('USER_GROUPS_IN', 'database');
 // These pages are only accessible to a member who has logged in
 $protectedPages = array(
 	'invitation',
-	'sign_in',	
 	'site'
 );
 

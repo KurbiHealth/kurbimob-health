@@ -1,7 +1,7 @@
 <?php 
 
 // if the app needs to be secure, check to see if incoming request is for http, and if it, redirect to https
-define('SECURE_APP',TRUE);
+define('SECURE_APP',FALSE);
 
 /**
  * EDITABLE APP SETTINGS
@@ -11,13 +11,13 @@ $siteSettingsFilename = ''; // 'kurbiSettings_siteKurbiNew'
 
 define('APP_GROUP_CONFIGURATIONS','');
 
-define('HOME_URL','/site/home');
-define('LOGGED_IN_HOME_URL','/communications/home');
-define('SIGN_UP_URL','SIGNUP_APP_URL');
+define('HOME_URL','/sign_in/user');
+define('LOGGED_IN_HOME_URL','/invitation/home');
+define('SIGN_UP_URL','SIGNUP_APP_URL'); // this de facto redirects all signup urls to the signup app
 define('SIGN_IN_URL','/sign_in/user');
-define('DEFAULT_PAGE','/site/home');
+define('DEFAULT_PAGE','/sign_in/user');
 
-define('USER_ROLE','patients');
+define('USER_ROLE','doctors');
 
 // if true session created for every page call, if false then control given to the Session class or the Controller class
 define('AUTO_SESSION', TRUE);
@@ -31,16 +31,9 @@ define('USER_GROUPS_IN', 'database');
 
 // These pages are only accessible to a member who has logged in
 $protectedPages = array(
-	'calendar',
-	'care_plan',	
-	'careteam',
-	'charts',
-	'check_in',
-	'communications',
-	'daily_journal',
-	'example',
-	'health_chart',
-	'kurbi'
+	'invitation',
+	'sign_in',	
+	'site'
 );
 
 /****************************************************************
@@ -55,7 +48,7 @@ if($siteSettingsFilename != '' && is_file('../'.$siteSettingsFilename.'.php'))
 else{
 	if(!defined('ROOT_URL')){
 		if(isset($_SERVER['HTTP_HOST'])){
-			define('ROOT_URL','https://'.$_SERVER['HTTP_HOST']);
+			define('ROOT_URL','http://'.$_SERVER['HTTP_HOST']);
 		}else
 			die('Unable to set constant ROOT_URL in index.php at line '.__LINE__);
 	}

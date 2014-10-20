@@ -15,7 +15,16 @@ class invitation extends appModel{
 
 
 	function post_form($data){
-return 'success';
+
+$post = $this->getPost();
+if(!empty($post)){
+	if($post['token'] == 'sd9fnt348y1232')
+		return 'success';
+	else
+		return 'unrecognized';
+}else{
+	return 'failed';
+}
 		global $firephp;
 		$new = $this->getPost();
 
@@ -139,8 +148,7 @@ Thank you.");
 		}else{
 			$return['userFeedback'][] = 'Failed in sending invitation to '.$new['email'].'.';
 		}
-	} // end foreach($members)
 	
-	if(!empty($return)){return json_encode($return);}
-
+		if(!empty($return)){return json_encode($return);}
+	}
 }

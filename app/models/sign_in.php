@@ -30,12 +30,13 @@ if(!empty($post)){
 	);
 	if(($post['email'] == $user['email']) && ($post['password'] == $user['password'])){
 		$this->_initializeUser($user);
-		$return = 'sd9fnt348y1232';
+		$return['status'] = 'success';
+		$return['token'] = 'sd9fnt348y1232';
 	}else{
-		$return = 'failed';
+		$return['status'] = 'failed';
 	}
 }else{
-	$return = 'failed';
+	$return['status'] = 'failed';
 }
 return json_encode($return);
 

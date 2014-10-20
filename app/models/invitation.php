@@ -19,11 +19,11 @@ $return = '';
 $post = $this->getPost();
 if(!empty($post)){
 	if(post['token'] == 'sd9fnt348y1232')
-		$return = 'success';
+		$return['status'] = 'success';
 	else
-		$return = 'unrecognized';
+		$return['status'] = 'tokenUnrecognized';
 }else{
-	$return = 'failed';
+	$return['status'] = 'failed';
 }
 return json_encode($return);
 

@@ -15,16 +15,18 @@ class invitation extends appModel{
 
 
 	function post_form($data){
-
+$return = '';
 $post = $this->getPost();
 if(!empty($post)){
-	if($post['token'] == 'sd9fnt348y1232')
-		return 'success';
+	if(post['token'] == 'sd9fnt348y1232')
+		$return = 'success';
 	else
-		return 'unrecognized';
+		$return = 'unrecognized';
 }else{
-	return 'failed';
+	$return = 'failed';
 }
+return json_encode($return);
+
 		global $firephp;
 		$new = $this->getPost();
 

@@ -18,6 +18,7 @@ class sign_in extends appModel{
 		// if current request is coming from the sign-in url, then use the ->checkIsUser function to check
 		// whether the user has valid credentials
 		// NOTE: $user at the next line will have the contents of the "people" table ONLY
+$return = '';
 $post = $this->getPost();
 if(!empty($post)){
 	$user = array(
@@ -29,13 +30,14 @@ if(!empty($post)){
 	);
 	if(($post['email'] == $user['email']) && ($post['password'] == $user['password'])){
 		$this->_initializeUser($user);
-		return 'sd9fnt348y1232';
+		$return = 'sd9fnt348y1232';
 	}else{
-		return 'failed';
+		$return = 'failed';
 	}
 }else{
-	return 'failed';
+	$return = 'failed';
 }
+return json_encode($return);
 
 		if(!SKIP_LOGIN_FOR_DEV){
 

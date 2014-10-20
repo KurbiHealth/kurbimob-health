@@ -33,7 +33,7 @@ if(!empty($post)){
 		$return['status'] = 'success';
 		$return['token'] = 'sd9fnt348y1232';
 	}else{
-		$return['status'] = 'failed';
+		$return['status'] = 'failed:Unknown user, please register at gokurbi.com';
 	}
 }else{
 	$return['status'] = 'failed';

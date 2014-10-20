@@ -18,7 +18,7 @@ class invitation extends appModel{
 $return = '';
 $post = $this->getPost();
 if(!empty($post)){
-	if(post['token'] == 'sd9fnt348y1232'){
+	if($post['token'] == 'sd9fnt348y1232'){
 		// check to see if user already in database
 $return['status'] = 'success';
 		// add user to database

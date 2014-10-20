@@ -18,10 +18,18 @@ class invitation extends appModel{
 $return = '';
 $post = $this->getPost();
 if(!empty($post)){
-	if(post['token'] == 'sd9fnt348y1232')
-		$return['status'] = 'success';
-	else
+	if(post['token'] == 'sd9fnt348y1232'){
+		// check to see if user already in database
+$return['status'] = 'success';
+		// add user to database
+
+		// send email to user
+
+		// return status to mobile app
+
+	}else{
 		$return['status'] = 'tokenUnrecognized';
+	}
 }else{
 	$return['status'] = 'failed';
 }

@@ -1,5 +1,7 @@
 <?php 
 
+header('Access-Control-Allow-Origin: *');
+
 // if the app needs to be secure, check to see if incoming request is for http, and if it, redirect to https
 define('SECURE_APP',FALSE);
 

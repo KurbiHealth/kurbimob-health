@@ -1,0 +1,180 @@
+html,
+body,
+#rBackground_one,
+.uiContainer,
+.curtain {
+  height: 100%;
+  width: 100%;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+#lBackground_one,
+#rBackground_one {
+  position: absolute;
+  z-index: 0;
+}
+.uiContainer {
+  position: absolute;
+  z-index: 10;
+}
+.curtain {
+  z-index: 100;
+}
+.gradientPurple {
+  background: -webkit-radial-gradient(circle, #511295, #2a0554);
+}
+.solidPurple {
+  background-color: #2A0554;
+}
+.solidGray {
+  background-color: #F7F6F3;
+}
+.highlight {
+  background-color: #999999 !important;
+}
+.heading {
+  color: #410285;
+  font-family: helvetica;
+  text-align: center;
+}
+.navText {
+  display: inline-block;
+  color: #410285;
+  font-family: helvetica;
+  text-align: left;
+  text-indent: 10px;
+}
+#navLogo {
+  display: inline-block;
+  width: 15px;
+  height: auto;
+}
+img.center {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#lLogoContainer {
+  width: 100%;
+}
+#lLogo {
+  display: block;
+  height: 100px;
+  width: auto;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10%;
+}
+.cPurple {
+  background-color: #410285;
+}
+.bButton {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
+  border-color: #999999;
+  color: white;
+  font-family: helvetica;
+  text-align: center;
+  font-size: 150%;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+#spLogin {
+  position: absolute;
+  bottom: 10%;
+  left: 15%;
+  width: 70%;
+}
+#lLogin {
+  margin-top: 10px;
+  border-radius: 4px;
+}
+#lFormContainer {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 95%;
+}
+#rFormContainer {
+  margin-right: auto;
+  margin-left: auto;
+  width: 95%;
+}
+.iBox {
+  color: black;
+  font-family: helvetica;
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 80%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-indent: 10px;
+  border: 1px solid #DFDFDF;
+  border-radius: 4px;
+}
+#lUsername {
+  display: block;
+  width: 100%;
+}
+#lPassword {
+  display: block;
+  width: 100%;
+}
+#rEmail {
+  display: block;
+  width: 100%;
+}
+#rAddress {
+  display: block;
+  width: 100%;
+}
+#rLastName {
+  display: inline-block;
+  text-align: left;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 60%;
+}
+#rFirstName {
+  display: inline-block;
+  text-align: left;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 60%;
+}
+#rState {
+  display: inline-block;
+  text-align: center;
+  width: 15%;
+  text-indent: 0px;
+}
+#rCity {
+  display: inline-block;
+  text-align: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 60%;
+}
+#rZipcode {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+  text-indent: 0px;
+}
